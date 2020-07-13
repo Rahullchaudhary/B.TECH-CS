@@ -1,0 +1,6 @@
+CREATE TABLE APPLY
+(
+    sID INTEGER,
+    cName VARCHAR(10),
+    major VARCHAR(20)
+);

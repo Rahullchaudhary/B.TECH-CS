@@ -1,0 +1,7 @@
+CREATE TABLE STUDENT
+(
+    sID INTEGER,
+    sName VARCHAR(10),
+    GPA FLOAT(2,1),
+    sizeHS INTEGER
+);
