@@ -1,0 +1,12 @@
+n = int(input())
+for i in range(n):
+    m = int(input())
+    k = list(map(int,input().split()))
+    k.reverse()
+    a = len(k)
+    c,d = 0,0
+    for j in range(a):
+        n = k[j]
+        d = (2**c)*m+d
+        c = c+1
+        print("NUM =",d)

@@ -1,0 +1,18 @@
+# Intersection by list comp.
+l1 = list(map(int,input().split()))
+l2 = list(map(int,input().split()))
+l3 = [i for i in l1 if i in l2]
+print(l3)
+
+# Union by using list com.
+l1 = list(map(int,input().split()))
+l2 = list(map(int,input().split()))
+l = [i for i in l1 if i in l2]
+b = [l1.append(i) for i in l2 if i not in l1]
+print(l1)
+
+# Difference
+l1 = list(map(int,input().split()))
+l2 = list(map(int,input().split()))
+l = [i for i in l1 if i not in l2]
+print(l)

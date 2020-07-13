@@ -1,0 +1,126 @@
+-- Query 1
+SELECT sName, DoB
+FROM STUDENT;
+
+-- Query 2
+SELECT sName
+FROM STUDENT
+WHERE GPA > 3.7;
+
+-- Query 3
+SELECT sName
+FROM STUDENT
+WHERE sizeHS>=1000 and DoB>'1996-12-31';
+
+-- Query 4
+SELECT sName
+FROM STUDENT
+WHERE GPA BETWEEN 2.9 and 3.9;
+
+-- Query 5
+SELECT *
+FROM COLLEGE 
+WHERE state='MA';
+
+-- Query 6
+SELECT sname
+FROM STUDENT
+WHERE GPA > 2 AND GPA < 3.5;
+
+-- Query 7
+SELECT sName
+FROM STUDENT
+WHERE DoB > '1996-07-01'
+ORDER BY DoB;
+
+-- Query 8
+SELECT sID, cName, decision 
+FROM APPLY
+WHERE decision = 'Y';
+
+-- Query 9
+SELECT sID, cName
+FROM APPLY
+WHERE cName = 'Stanford';
+
+-- Query 10
+SELECT cName
+FROM COLLEGE
+WHERE enrollment > 10001;
+
+-- Query 11
+SELECT cName
+FROM COLLEGE
+WHERE state != 'CA';
+
+-- Query 12
+SELECT sName
+FROM STUDENT
+WHERE sizeHS > 1700 AND GPA < 3.8;
+
+-- Query 13
+DESCRIBE STUDENT;
+
+-- Query 14
+SELECT *
+FROM STUDENT;
+
+-- Query 15
+SELECT DISTINCT major
+FROM APPLY;
+
+-- Query 16
+SELECT sName
+FROM STUDENT 
+WHERE sName LIKE '___';
+
+-- Query 17
+SELECT sName
+FROM STUDENT 
+WHERE sName LIKE 'H____';
+
+-- Query 18
+SELECT sName
+FROM STUDENT 
+WHERE sName LIKE '__e_e%';
+
+-- Query 19
+SELECT sName
+FROM STUDENT 
+WHERE sName LIKE '%y';
+
+-- Query 20
+SELECT *
+FROM STUDENT 
+ORDER BY GPA;
+
+-- Query 21
+SELECT *
+FROM STUDENT 
+ORDER BY GPA, DoB DESC;
+
+-- Query 22
+SELECT sID
+FROM APPLY 
+WHERE cName IN ('Stanford', 'Cornell', 'MIT');
+
+-- Query 23
+DELETE FROM APPLY
+WHERE cName = 'Stanford';
+
+-- Query 24
+DELETE FROM COLLEGE
+WHERE cName = 'Stanford';
+
+-- Query 25
+UPDATE STUDENT
+SET GPA = GPA + (GPA * 0.1);
+
+-- Query 26
+UPDATE STUDENT
+SET GPA = GPA + 1.5
+WHERE GPA < 3.5 AND sizeHS > 1500;
+
+-- Query 27
+DELETE FROM STUDENT
+WHERE GPA < 3.2;

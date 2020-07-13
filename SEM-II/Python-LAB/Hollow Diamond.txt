@@ -1,0 +1,23 @@
+b= int(input('enter a no what no. of rows you want: '))
+a = (b//2)+1
+p=0
+for i in range(1, a+1):
+    print(' '*(a - i),end='')                                       # Hollow Diamond
+    while p != 2*i-1:
+        if p == 0 or p == 2*i-2:
+            print('*',end='')
+        else:
+            print(' ',end='')
+        p+=1
+    print()
+    p=0
+for i in range(a-1,0,-1):
+      print(' ' * (a - i), end='')
+      while p != 2 * i - 1:
+            if p == 0 or p == 2 * i - 2:
+                print('*', end='')
+            else:
+                print(' ', end='')
+            p += 1
+      print()
+      p = 0

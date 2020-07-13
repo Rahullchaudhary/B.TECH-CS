@@ -1,0 +1,29 @@
+# Binary Burj Khalipa
+n=int(input())
+l = len(str(bin(n)))-2
+for i in range(n+1):
+    i = bin(i)
+    i = str(i)[2:]
+    m = len(i)
+    print(' '*(l-m)+i)
+# Badminton Tournaments Series
+n = input()
+n = n.split(",")
+b = ""
+c = 0
+d = 0
+for i in n:
+    for j in n:
+        if j == i:
+            c = c+1
+    if c>d:
+        b = i
+        d = c
+    c = 0
+print(b)
+
+# II MATHOD 
+
+n = list(map(str,input().split(','))
+m = max(n,key=n.count)
+print(m)

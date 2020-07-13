@@ -1,0 +1,13 @@
+# MAX NO. IN LIST
+s = list(input())
+max=s[0]
+for i in range(len(s)):
+    if(s[i]>max):
+        max=s[i]
+print(max)
+# ********************************************
+st = input()
+lis = [",", ".", "!", "?"]
+for i in lis:
+    st = st.replace(i, "").lower()
+print(st)

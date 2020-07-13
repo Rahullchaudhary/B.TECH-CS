@@ -1,0 +1,6 @@
+tp = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+t = []
+for i in tp:
+    if i:
+        t.append(i)
+print(t)

@@ -1,0 +1,12 @@
+CREATE TABLE DEPT(
+                  deptno integer,
+                  dname varchar(15),
+                  loc varchar(15)
+);
+
+INSERT INTO DEPT VALUES(1,'ACCOUNTING','STLOUTS');
+INSERT INTO DEPT VALUES(2,'RESEARCH','NEW YORK');
+INSERT INTO DEPT VALUES(3,'SALES','ATLANTA');
+INSERT INTO DEPT VALUES(4,'OPERATION','SEATTLE');
+
+SELECT * FROM DEPT;

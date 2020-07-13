@@ -1,0 +1,12 @@
+CREATE TABLE DEPT
+(
+	deptno INTEGER,
+    dname VARCHAR(20),
+    loc VARCHAR(20)
+);
+
+INSERT INTO DEPT VALUES
+    (1,'ACCOUNTING','ST LOUIS'),
+    (2,'RESEARCH','NEW YORK'),
+    (3,'SALES','ATLANTA'),
+    (4,'OPERATIONS','SEATTLEdept');
