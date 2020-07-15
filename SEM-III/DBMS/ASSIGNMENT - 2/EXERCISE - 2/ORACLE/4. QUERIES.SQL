@@ -66,7 +66,6 @@ FOREIGN KEY (cName) REFERENCES COLLEGE (cName)
 ON DELETE CASCADE;
 
 /* Query 13. Modify foreign key on sID in Apply table to foreign key on delete set null. */
-
 ALTER TABLE APPLY
 DROP PRIMARY KEY
 DROP CONSTRAINT sID_FK
