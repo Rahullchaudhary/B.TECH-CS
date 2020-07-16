@@ -1,0 +1,6 @@
+CREATE TABLE DEPT_LOCATION
+(
+     DepNo INTEGER,
+     DLocation VARCHAR(25),
+     CONSTRAINT Dep_PK PRIMARY KEY (DepNo,DLocation)
+);
