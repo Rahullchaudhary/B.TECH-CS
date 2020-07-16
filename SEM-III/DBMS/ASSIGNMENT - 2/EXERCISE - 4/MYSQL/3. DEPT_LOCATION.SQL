@@ -1,0 +1,6 @@
+CREATE TABLE DEPT_LOCATIONS
+(
+    DeptNO INTEGER,
+    DLocation VARCHAR(20),
+    PRIMARY KEY (DeptNO, DLocation)
+);

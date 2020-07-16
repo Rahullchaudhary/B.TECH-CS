@@ -1,0 +1,7 @@
+CREATE TABLE PROJECT
+(
+    PName VARCHAR(20),
+    PNumber INTEGER PRIMARY KEY,
+    PLocation VARCHAR(10),
+    DepNo INTEGER
+);
