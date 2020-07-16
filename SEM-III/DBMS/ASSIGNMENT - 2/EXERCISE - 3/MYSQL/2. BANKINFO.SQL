@@ -1,0 +1,10 @@
+CREATE TABLE BANKINFO
+(
+    AccountNo FLOAT(10),
+    CustomerId VARCHAR(6),
+    CONSTRAINT
+		PRIMARY KEY (AccountNo,CustomerId),
+    CONSTRAINT
+		FOREIGN KEY (CustomerId) REFERENCES  CUSTOMER(CustomerId)
+		ON DELETE CASCADE
+);

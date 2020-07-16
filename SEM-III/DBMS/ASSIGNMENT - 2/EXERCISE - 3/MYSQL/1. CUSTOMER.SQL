@@ -1,0 +1,8 @@
+CREATE TABLE CUSTOMER
+(
+    CustomerId VARCHAR(6) PRIMARY KEY CHECK(CustomerId LIKE 'C%'),
+    CustomerName VARCHAR(30) NOT NULL,
+    DateOfReg DATE,
+    UserId VARCHAR(15) UNIQUE,
+    Password VARCHAR(15) NOT NULL
+);
