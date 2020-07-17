@@ -7,6 +7,7 @@ CREATE TABLE ITEM
     Class CHAR(1),
     UnitOfMeasurement VARCHAR(12),
     ReOrderLevel NUMBER(3) CHECK (ReOrderLevel > 0),
+    ReOrderQty NUMBER(3) CHECK (ReOrderQty > 0),
     Discount NUMBER(2),
     CHECK (QtyOnHand > ReOrderLevel)
 );
