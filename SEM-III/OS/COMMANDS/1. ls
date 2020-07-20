@@ -1,0 +1,18 @@
+*.*                        -> for all show all extention files
+*(wildcard)
+
+ls                         -> for cureent directory content
+ls dir_name/               -> for see direct content of any folder or directory like (ls Downloads/)
+ls /                       -> for see list of root directory
+ls ..                      -> for one step back in dir
+ls ../..                   -> for two step back in dir
+ls -l                      -> list with authorize permission & full details(time,size...etc)
+ls -a                      -> for seeing hidden files (.file_name)
+ls -s                      -> for sorting the files in asending order , this is also valid (ls -sl)
+ls folder_name/*.extention -> for seeing specify extention files  , for example (ls Downloads/*.deb)
+ls *.extention             -> Is also for seeing specify extention file but in this case you should want to 
+                              stay the same directory 
+ls -flag > file_name.txt   -> for saving the output of the command file name what you want
+ls -d */                   -> for seeing all the directories                       
+ls -R                      -> for directory structure
+-------------------------------------------------------------------------------------------------------

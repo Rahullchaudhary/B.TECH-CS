@@ -1,0 +1,10 @@
+cd command SYNTAX : cd [dir]
+cd or cd ~      -> for home directory '~' this symbol means you are in home directory
+cd /            -> for root directory '/' this type symbol means you are in root directory
+cd ..           -> for one step back means one dir back
+cd ../..        -> for two step back means two dir back
+Three mathods for go to folder which has spase in their name like (My Books) =>
+                                                                            1. cd My\Books
+                                                                            2. cd "My Books"
+                                                                            3. cd 'My Books'
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                            

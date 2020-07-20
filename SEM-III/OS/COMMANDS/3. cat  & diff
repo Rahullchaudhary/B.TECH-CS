@@ -1,0 +1,23 @@
+cat  - command
+
+cat file_name.extention       -> for seeing the file details ypu also see multiple files by seprate each file 
+                                 with comma
+cat -b file_name.extention    -> for see content with line number without counting blank line
+cat -n file_name.extention    -> for see content with number with counting blank line
+cat -s file_name.extention    -> for see content with blank but it treated many blank line as one blank line
+cat -E file_name.extention    -> it add a $ symbol in the end of line 
+cat /etc/group                -> for see the all groups in your system
+for flags => man cat
+---------------------------------------------------------------------------------------------------------
+Redirection =>
+
+cat > file_name.extention     -> for create New file , 
+                                 If we use this command again and add some text then this text over write on the 
+                                 previous content
+cat >> file_name.extention    -> for add(append) comtent without overwriting the  previous content
+cat N_No._of_file.extention   -> for merge N no. file to new file
+cat file.ext >> file2.ext     -> for merge data and see output in the existing file
+---------------------------------------------------------------------------------------------------------
+diff - COMMAND -> for compare the files
+ex-->  diff n1 n2
+---------------------------------------------------------------------------------------------------------

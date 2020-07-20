@@ -1,0 +1,9 @@
+mkdir - command
+
+mkdir file_name              -> for create new folder 
+mkdir dir_name/new_dir_name  -> for create a folder inside the existing directory
+mkdir -p file_name/file_name -> for create new folder and also create a folder inside the currently created folder
+                                and one notation is 'mkdir --parents file_name/file_name'
+mkdir dir_1 dir_2 dir_3      -> for making multiple dir by run one command
+mkdir dir_name/{dir_1,dir_2} -> for making multiple dir inside the  existing dir
+------------------------------------------------------------------------------------------------------
