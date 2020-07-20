@@ -1,0 +1,18 @@
+df - command  (disk usage) of dir
+
+df        -> for see disk usage and available space without no unit
+df -h     -> for see disk usage and available space with human readabilty
+---------------------------------------------------------------------------------------------------------
+du - command (disk usage) of dir
+
+du -h           -> for human readabilty
+du -a           -> for all files and dir
+du -sh          -> for summary of disk usage with human readabilty
+du ~/dir1~/dir2 -> multiple dir content disk usage
+---------------------------------------------------------------------------------------------------------
+free - command for see our system swap area and memory
+
+free -flag      -> for human readabilty
+flags           -> -b (byte) , -m (megabyte) , -k (kilobyte) , -g (gigabyte)
+---------------------------------------------------------------------------------------------------------
+

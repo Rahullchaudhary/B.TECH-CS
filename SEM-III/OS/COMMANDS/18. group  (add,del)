@@ -1,0 +1,15 @@
+groups - command 
+
+groups           -> for see groups
+cat /etc/group   -> for see all groups in your system
+----------------------------------------------------------------------------------------------------------
+groupadd - command
+
+sudo groupadd group_name             -> for add group (group add in system datewise)
+sudo gpasswd -a user_name group_name -> for add existing group to user
+----------------------------------------------------------------------------------------------------------
+groupdel -command
+
+sudo groupdel group_name             -> for delete group
+sudo gpasswd -d user_name group_name -> for remove existing group to user
+----------------------------------------------------------------------------------------------------------

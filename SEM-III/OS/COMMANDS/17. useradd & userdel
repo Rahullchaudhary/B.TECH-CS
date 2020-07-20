@@ -1,0 +1,15 @@
+useradd - command for add user
+
+SYNTAX => sudo useradd user_name -m -s /usr/bin/bash -g users -c "comment"
+          sudo passwd user-name
+
+-m      => for defalut home
+-s      => for default shell
+-g      => for default group
+-c      => for comment
+---------------------------------------------------------------------------------------------------------
+userdel - command for delete the user
+
+sudo userdel user_name        -> for remove the user but it can't be remove user from home  
+sudo userdel -r user-name     -> for remove user completely 
+---------------------------------------------------------------------------------------------------------

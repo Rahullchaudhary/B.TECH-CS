@@ -1,0 +1,13 @@
+which - command  
+
+which name            -> for searching programm,bash location
+---------------------------------------------------------------------------------------------------------
+command - whatis
+
+whatis command_name   -> display one-line manual page descriptions
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+
