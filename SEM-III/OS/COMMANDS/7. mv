@@ -1,0 +1,12 @@
+mv - command for move files and dir  SYNTAX => mv option source destination
+
+mv file_1.ext file_1.ext         -> for rename the files 
+mv file_name dir_name            -> for move the file into dir,
+                                    if we move same name file and this nname file already exist then the new 
+                                    file overwrite the old file
+mv -i file_name dir_name         -> for move file with asking question by terminal overwrite or not
+mv dir_1 dir_2                   -> for move dir in another dir with it's content,
+                                    if dir doesn't exist then it create a new dir in other word we say it 
+                                    change the name  of the dir
+man mv                           -> for more flags (manual)
+

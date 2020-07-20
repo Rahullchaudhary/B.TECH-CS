@@ -1,0 +1,12 @@
+less - command for read content stepwise
+
+less file_name.ext               -> for read data stepwise line by line (down arrow key or up arrow key),
+                    space        -> downward page by page then use 'space',
+                     b           -> upward page by page then press 'b',
+                     G           -> for end of file then use 'G',
+                    1g or g      -> for starting of file use '1g' or 'g',
+                    /word_name   -> for see specify word '/word_name',
+                                    for see next searching word press 'n' (up to down)
+                    ?word_name   -> for see next searching word press 'n' (down to up)
+                  
+ 

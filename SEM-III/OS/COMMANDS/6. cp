@@ -1,0 +1,11 @@
+cp - command for copy file
+i => interactive  inetrdace
+
+cp file1.ext file2.ext         -> for copy the file one to another
+cp file1.ext file2.ext dir     -> for copy the file to another dir
+cp -i file1.ext file2.ext dir  -> for copy file with question overwrite or not
+cp ../                         -> one step back
+cp -R dir1 dir2                -> for recursively copy,if dir is already exist then this command copy dir 
+                                  inside the existing dir
+cp dir1 dir2                   -> for copy empty dir
+--------------------------------------------------------------------------------------------------------

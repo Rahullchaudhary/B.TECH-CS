@@ -1,0 +1,5 @@
+touch - command for create empty file only
+
+touch file_name                -> for create empty file only,
+                               -> for change the time stamp recreate same empty file then it will show you 
+                                  current time
