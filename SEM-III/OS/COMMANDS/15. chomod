@@ -1,0 +1,28 @@
+chmod - command (SYMBOLIC METHOD) for permission ----->
+SYNTAX => chmod option operator permission
+
+DEFAULT PERMISSIONS =>   
+DIRECTORY ---> OWNER  -rwx, 
+               GROUP  -rx,
+               PUBLIC -rx
+FILE      ---> OWNER  -rw,
+               GRPOUP  -r,
+               PUBLIC -r
+--------------------------------------------------------------------------------------------------------- 
+PERMISSION OPRETORS ->
+ADD    =   '+'
+remove =   '-'
+set    =   '='
+---------------------------------------------------------------------------------------------------------
+OCTAL METHOD ->  SYNTAX => chmod no_for_user no_for_group n0_for_public file_name    (chmod 765 n1.txt)
+rwx ->
+0 - 000 - NO PERMISSION                              MODIFIED WAY => 1 EXECUTE
+1 - 001 - EXECUTE                                                    2 WRITE
+2 - 010 - WRITE                                                      4 READ      
+3 - 011 - W&E
+4 - 100 - READ
+5 - 101 - READ & EXECUTE
+6 - 110 - READ & WRITE
+7 - 111 - READ, WRITE & EXECUTE
+--------------------------------------------------------------------------------------------------------
+

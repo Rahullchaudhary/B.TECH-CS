@@ -1,0 +1,13 @@
+echo - command  for bash Scripting
+
+
+echo                      -> for echo (ex - echo hello) or (echo "hello")
+echo                      -> for show variable (Ex. => var_name="string" then for see result  'echo $var_name'),
+                          -> this variable is valid for only current session
+                             Example => x=10
+                                        echo "The Value of x is $x" output
+                             output  => The Value of x is 10
+echo -e 'string\sequence'-> for enable escape sequence like (echo -e 'some\ttext')   
+                            sequence => \t,\b,\n...etc
+--------------------------------------------------------------------------------------------------------------                            
+                             

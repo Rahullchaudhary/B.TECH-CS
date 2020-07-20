@@ -1,0 +1,17 @@
+ps - command for only pid
+
+ps -aux                          -> for all pid
+ps -ux                           -> for see pid , one more thing pid is not same it will always change 
+ps -U username                   -> running program in user
+ps -C program_name               -> for get specify process pid  
+ps -U user_name | process_name   -> for det specify process pid
+-------------------------------------------------------------------------------------------------------------
+kill - command  SYNTAX => kill -flag pid
+pid means name of process
+
+kill pid                  -> for close or kill the program
+kill -KILL pid            -> for close program forcefully
+kill -9 pid               -> for kill when kill pid not work
+-------------------------------------------------------------------------------------------------------------
+
+

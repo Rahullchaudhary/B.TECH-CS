@@ -1,0 +1,14 @@
+sudo - command  (super user privilages)    SYNTAX =>  sudo other_command option 
+                                                  =>  qsudo, sudoedit — execute a command as another user
+                                                  =>  for root permission 
+
+sudo mkdir dir_name                 -> for give forcefully permission to make dir
+sudo apt-get install package_name   -> for give permission to install pakages
+sudo -s                             -> for reach superuser mode
+sudo -i                             -> for home dir
+sudo passwd user-name               -> for add passard or change the passward
+sudo useradd user_name -m -s /usr/bin/bash -g users -c "comment"  -> for add user
+sudo userdel user_name              -> for remove the user but it can't be remove user from home  
+sudo userdel -r user-name           -> for remove user completely 
+sudo groupadd group_name            -> for add group (group add in system datewise)
+--------------------------------------------------------------------------------------------------------

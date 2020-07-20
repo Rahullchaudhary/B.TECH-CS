@@ -1,0 +1,19 @@
+top - command
+
+top                -> for see top program or process which consuming most of memory of cpu,
+                   -> and also it provide us pid of process ,
+              s    -> when we press 's' in terminal , it asks us how much time we want to delay,
+              i    -> for filter the ideal process it show us only running process,
+              k    -> for kill processes by giving it pid and press 'enter' two times
+-------------------------------------------------------------------------------------------------------------              
+PID   => Process Identification Number
+PR    => PR is the process's actual priority, as viewed by the Linux kernel. For normal processes, the kernel   
+         priority is simply +20 from the nice value. Thus a process with the neutral nice value of zero has a   
+         kernel priority of 20. (PRIORITY OF PROCESS)
+NI    => NI is the nice value, which is a user-space concept.  (NICE VALUE)
+VIRT  => VIRT represents how much memory the program is able to access at the present moment. (VIRTUAL SIZE) 
+RES   => RES stands for the resident size, which is an accurate representation of how much actual physical memory a 
+         process is consuming. (RESIDENT SIZE)
+SHR   => The amount of shared memory used by a task. It simply reflects memory that could be potentially shared 
+         with other processes. (SHARED MEMORY SIZE (KB))
+      -------------------------------------------------------------------------------------------------------
