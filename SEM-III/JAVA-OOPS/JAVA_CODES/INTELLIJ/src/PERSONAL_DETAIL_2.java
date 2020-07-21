@@ -10,7 +10,7 @@
   COURSE : B.TECH-CSE */
 
 import java.util.Scanner;
-public class DemonStrate {
+public class PERSONAL_DETAIL_2 {
     public static void main(String[] args){
         Scanner object = new Scanner(System.in);
         System.out.println("Enter your name");

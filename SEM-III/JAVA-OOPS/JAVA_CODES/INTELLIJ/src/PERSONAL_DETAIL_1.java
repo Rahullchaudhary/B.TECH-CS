@@ -10,7 +10,7 @@
 
 
 import java.util.Scanner;
-public class DemoScanner {
+public class PERSONAL_DETAIL_1 {
     public static void main(String[] args){
         Scanner object = new Scanner(System.in);
         System.out.println("Enter Your Full NAME");
