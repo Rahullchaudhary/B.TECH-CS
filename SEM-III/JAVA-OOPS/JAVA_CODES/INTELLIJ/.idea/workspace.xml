@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338453a1-1644-4803-940c-a939c7798643" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../DBMS/ASSIGNMENT - 2/EXERCISE - 1/ORACLE/2. EMPLOYEE.SQL" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DBMS/ASSIGNMENT - 2/EXERCISE - 1/ORACLE/2. EMPLOYEE.SQL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../JAVA/JAVA_CODES/1. PERSONAL_DETAILS.JAVA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../JAVA/JAVA_CODES/2. PERSONAL_DETAILS.JAVA" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NESTED_IF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SWITCH_CASE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +34,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.SIMPLE_INTREST">
-    <configuration name="CONDITION" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CONDITION" />
-      <module name="INTELLIJ" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PERSONAL_DETAIL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PERSONAL_DETAIL" />
+  <component name="RunManager" selected="Application.SWITCH_CASE">
+    <configuration name="NESTED_IF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NESTED_IF" />
       <module name="INTELLIJ" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,13 +71,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SWITCH_CASE" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SWITCH_CASE" />
+      <module name="INTELLIJ" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SWITCH_CASE" />
+        <item itemvalue="Application.NESTED_IF" />
         <item itemvalue="Application.SIMPLE_INTREST" />
         <item itemvalue="Application.PERSONAL_DETAIL_2" />
         <item itemvalue="Application.PERSONAL_DETAIL_1" />
-        <item itemvalue="Application.CONDITION" />
-        <item itemvalue="Application.PERSONAL_DETAIL" />
       </list>
     </recent_temporary>
   </component>
@@ -94,6 +100,7 @@
       <updated>1595304159569</updated>
       <workItem from="1595304160887" duration="433000" />
       <workItem from="1595304738445" duration="48000" />
+      <workItem from="1595306058043" duration="2530000" />
     </task>
     <servers />
   </component>
@@ -101,25 +108,33 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1595304786102">
+    <state x="1031" y="310" width="241" height="275" key="Github.ShareDialog" timestamp="1595308329727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595304786102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1595304786102">
+    <state x="1031" y="310" width="241" height="275" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1595308329727" />
+    <state width="724" height="212" key="GridCell.Tab.0.bottom" timestamp="1595308057137">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595304786102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1595304786102">
+    <state width="724" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595308057137" />
+    <state width="724" height="212" key="GridCell.Tab.0.center" timestamp="1595308057137">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595304786102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1595304786102">
+    <state width="724" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595308057137" />
+    <state width="724" height="212" key="GridCell.Tab.0.left" timestamp="1595308057136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595304786102" />
+    <state width="724" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595308057136" />
+    <state width="724" height="212" key="GridCell.Tab.0.right" timestamp="1595308057137">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="724" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595308057137" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1595304275796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595304275796" />
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595307200823">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595307200823" />
   </component>
 </project>
