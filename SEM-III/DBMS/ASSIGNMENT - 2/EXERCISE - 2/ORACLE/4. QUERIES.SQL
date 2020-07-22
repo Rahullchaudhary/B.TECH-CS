@@ -11,7 +11,7 @@ ADD CONSTRAINT sID_PK PRIMARY KEY (sID);
 /* Query 3. Add sID, cName, major as Primarykey in Apply. */
 
 ALTER TABLE APPLY
-ADD PRIMARY KEY (sID, cName, major);
+ADD CONSTRAINT all_PK PRIMARY KEY (sID, cName, major);
 
 /* Query 4. Make sID in Apply foreign key referring table student and cName referring table college. */
 
