@@ -28,6 +28,7 @@ public class SWITCH_CASE {
             default :
                 System.out.println("THANK YOU FOR YOUR KIND ATTENTION !");
         }
+        OBJECT.close();
 
     }
 

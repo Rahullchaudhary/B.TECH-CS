@@ -26,6 +26,6 @@ public class NESTED_IF {
             System.out.println("YOU AGE IS LESS THAN 18 !");
         }
 
-
+        OBJECT.close();
     }
 }

@@ -33,5 +33,6 @@ public class PERSONAL_DETAIL_1 {
         System.out.println("CPI : " + CPI);
         System.out.println("Mobile No : " + MobileNo);
         System.out.println("Passed : " + Passed);
+        object.close();
     }
 }

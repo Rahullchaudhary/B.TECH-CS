@@ -23,6 +23,7 @@ public class ODD_NUMBER {
             }
 
         }
+        SC.close();
 
     }
 }

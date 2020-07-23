@@ -15,5 +15,6 @@ public class CONDITION {
         {
             System.out.println("YOU ARE ABLE TO GIVE VOTE !");
         }
+        object.close();
     }
 }

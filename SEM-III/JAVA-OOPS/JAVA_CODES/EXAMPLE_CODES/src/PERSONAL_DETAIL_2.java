@@ -33,5 +33,6 @@ public class PERSONAL_DETAIL_2 {
         System.out.println("SECTION : " + Section);
         System.out.println("COURSE YEAR : " + Year);
         System.out.println("COURSE : " + Course);
+        object.close();
     }
 }

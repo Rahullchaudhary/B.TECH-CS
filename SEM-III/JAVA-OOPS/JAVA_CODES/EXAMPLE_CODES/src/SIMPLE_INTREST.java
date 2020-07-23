@@ -21,6 +21,6 @@ public class SIMPLE_INTREST {
 
         SI = (P * N * R) / 100;
         System.out.println("YOUR SIMPLE INTREST IS : " + SI + " rs.");
-
+        object.close();
     }
 }
