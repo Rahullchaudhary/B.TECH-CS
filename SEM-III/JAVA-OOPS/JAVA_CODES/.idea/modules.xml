@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/COUNT_EVEN/COUNT_EVEN.iml" filepath="$PROJECT_DIR$/COUNT_EVEN/COUNT_EVEN.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DIGITAL_EXTRATION/DIGITAL_EXTRATION.iml" filepath="$PROJECT_DIR$/DIGITAL_EXTRATION/DIGITAL_EXTRATION.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EXAMPLE_CODES/EXAMPLE_CODES.iml" filepath="$PROJECT_DIR$/EXAMPLE_CODES/EXAMPLE_CODES.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA_CODES.iml" filepath="$PROJECT_DIR$/.idea/JAVA_CODES.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NUMBER_FORMATION/NUMBER_FORMATION.iml" filepath="$PROJECT_DIR$/NUMBER_FORMATION/NUMBER_FORMATION.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ODD_NUMBER/ODD_NUMBER.iml" filepath="$PROJECT_DIR$/ODD_NUMBER/ODD_NUMBER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Codes.iml" filepath="$PROJECT_DIR$/Java_Codes.iml" />
     </modules>
   </component>
 </project>
