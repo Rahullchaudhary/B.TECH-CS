@@ -6,6 +6,7 @@ chars:  H    e   l   l   o
 Every character is separated by tab, use "\t" for inserting tab.
 */
 
+
 import java.util.Scanner;
 
 public class Task5 {
