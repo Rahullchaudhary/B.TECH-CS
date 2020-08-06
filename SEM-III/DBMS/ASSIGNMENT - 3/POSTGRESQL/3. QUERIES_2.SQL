@@ -29,7 +29,7 @@ WHERE STUDENT.sID = APPLY.sID
     AND APPLY.cName = 'Stanford';
             -- By natural join
 SELECT
-    sID, sName, GPA, sizeHS
+    STUDENT.sID, STUDENT.sName, STUDENT.GPA, sizeHS
 FROM STUDENT
     NATURAL JOIN APPLY
 WHERE STUDENT.sizeHS < 20000
@@ -51,13 +51,13 @@ SELECT *
 FROM STUDENT CROSS JOIN APPLY CROSS JOIN COLLEGE
 WHERE STUDENT.sID = APPLY.sID
     AND APPLY.cName = COLLEGE.cOLLEGEName
-ORDER BY STUDENT.sName,sID;
+ORDER BY STUDENT.sName, STUDENT.sID;
             -- By natural join
 SELECT *
 FROM STUDENT
     NATURAL JOIN APPLY
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
-ORDER BY sName, sID;
+ORDER BY STUDENT.sName, STUDENT.sID;
             -- By inner join
 SELECT *
 FROM STUDENT
@@ -87,7 +87,7 @@ WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
         AND APPLY.decision = 'N'
-ORDER BY sName , sID;
+ORDER BY STUDENT.sName , STUDENT.sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
@@ -129,7 +129,7 @@ WHERE
         AND APPLY.major = 'CS'
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
-ORDER BY sName , sID;
+ORDER BY STUDENT.sName , STUDENT.sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
