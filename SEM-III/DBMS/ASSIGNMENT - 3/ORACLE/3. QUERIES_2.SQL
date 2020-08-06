@@ -57,7 +57,7 @@ SELECT *
 FROM STUDENT
     NATURAL JOIN APPLY
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
-ORDER BY STUDENT.sName, STUDENT.sID;
+ORDER BY sName, sID;
             -- By inner join
 SELECT *
 FROM STUDENT
@@ -87,7 +87,7 @@ WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
         AND APPLY.decision = 'N'
-ORDER BY STUDENT.sName , STUDENT.sID;
+ORDER BY sName, sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
@@ -129,7 +129,7 @@ WHERE
         AND APPLY.major = 'CS'
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
-ORDER BY STUDENT.sName , STUDENT.sID;
+ORDER BY sName , sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
