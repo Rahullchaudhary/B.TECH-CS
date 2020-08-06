@@ -28,8 +28,8 @@ WHERE STUDENT.sID = APPLY.sID
     AND APPLY.major = 'CS'
     AND APPLY.cName = 'Stanford';
             -- By natural join
-SELECT 
-    STUDENT.sID, STUDENT.sName, STUDENT.GPA, STUDENT.sizeHS
+SELECT
+    sID, sName, GPA, sizeHS
 FROM STUDENT
     NATURAL JOIN APPLY
 WHERE STUDENT.sizeHS < 20000
@@ -50,19 +50,19 @@ WHERE STUDENT.sizeHS < 20000
 SELECT *
 FROM STUDENT CROSS JOIN APPLY CROSS JOIN COLLEGE
 WHERE STUDENT.sID = APPLY.sID
-    AND APPLY.cName = COLLEGE.collegeName
-ORDER BY STUDENT.sName, STUDENT.sID;
+    AND APPLY.cName = COLLEGE.cOLLEGEName
+ORDER BY STUDENT.sName,sID;
             -- By natural join
 SELECT *
 FROM STUDENT
     NATURAL JOIN APPLY
-    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
-ORDER BY STUDENT.sName, STUDENT.sID;
+    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
+ORDER BY sName, sID;
             -- By inner join
 SELECT *
 FROM STUDENT
     INNER JOIN APPLY ON APPLY.sID = STUDENT.sID
-    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
+    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
 ORDER BY STUDENT.sName, STUDENT.sID;
 
 -- Q15. Names and GPAs of students with HS>1000 who applied to CS and were rejected.
@@ -87,7 +87,7 @@ WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
         AND APPLY.decision = 'N'
-ORDER BY STUDENT.sName , STUDENT.sID;
+ORDER BY sName , sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
@@ -123,20 +123,20 @@ SELECT
 FROM
     STUDENT
     NATURAL JOIN APPLY
-    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
+    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
 WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
-ORDER BY STUDENT.sName , STUDENT.sID;
+ORDER BY sName , sID;
             -- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
     STUDENT
     INNER JOIN APPLY ON STUDENT.sID = APPLY.sID
-    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
+    INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
 WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
