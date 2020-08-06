@@ -143,8 +143,3 @@ WHERE
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
 ORDER BY STUDENT.sName , STUDENT.sID;
-
-
-
-
-csc
