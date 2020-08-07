@@ -1,0 +1,20 @@
+adduser Add a new user 		
+arch 	Print machine architecture 	
+awk 	Find and Replace text within file(s) 		
+bc 	An arbitrary precision calculator language 	
+cal 	Display a calendar 		
+cat 	Concatenate files and print on the standard output 		
+chgrp 	Change the group ownership of files 		
+chmod 	Change the access permissions of files and directories 			
+clear 	Clear terminal screen 		
+cmp 	Compare two files 		
+comm 	Compare two sorted files line by line 		
+cp 	Copy one or more files to another location 		
+cron 	Daemon to execute scheduled commands 			
+csplit 	Split a file into context-determined pieces 		
+cut 	Divide a file into several parts 		
+date 	Display or change the date & time 		
+dc 	Desk Calculator 		
+dd 	Data Dump - Convert and copy a file 		
+df 	Display free disk space 	 
+diff 	Display the differences between two files
