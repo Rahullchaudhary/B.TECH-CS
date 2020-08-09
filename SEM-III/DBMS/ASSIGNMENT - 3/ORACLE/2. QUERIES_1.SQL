@@ -10,6 +10,7 @@ SELECT *
 FROM STUDENT
     CROSS JOIN APPLY
 ORDER BY STUDENT.sID;
+
 -- Q2. Give Student ID, name, GPA and name of college and major each student applied to.
 -- By cardinality
 SELECT 
@@ -24,6 +25,7 @@ SELECT
 FROM STUDENT
     INNER JOIN APPLY ON STUDENT.sID = APPLY.sID
 ORDER BY STUDENT.sID;
+
 -- Q3.Find detail of applications who applied to California State.
 -- By cardinality
 SELECT 
@@ -42,10 +44,9 @@ FROM APPLY
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
 WHERE College.state = 'CA'
 ORDER BY APPLY.sID;
-- - Q4.IDs,
-name,
-GPA of students
-and name of college with GPA > 3.7 applying to Stanford -- By cardinality
+
+-- Q4.IDs,name,GPA of studentsand name of college with GPA > 3.7 applying to Stanford 
+-- By cardinality
 SELECT DISTINCT  
     STUDENT.sID, STUDENT.sName, STUDENT.GPA, APPLY.cName
 FROM STUDENT,
@@ -62,6 +63,7 @@ FROM STUDENT
 WHERE STUDENT.GPA > 3.7
     AND APPLY.cName = 'Stanford'
 ORDER BY STUDENT.sID;
+
 -- Q5. Find detail of Student who apply to CS major and their application are rejected
 -- By cardinality
 SELECT
@@ -80,6 +82,7 @@ FROM STUDENT
 WHERE APPLY.decision = 'N'
     AND APPLY.major = 'CS'
 ORDER BY STUDENT.sID;
+
 -- Q6. Find detail of student and application who applied to colleges at New York
 -- By cardinality
 SELECT
@@ -100,6 +103,7 @@ FROM STUDENT
     INNER JOIN COLLEGE ON COLLEGE.collegeName = APPLY.cName
 WHERE COLLEGE.state = 'NY'
 ORDER BY STUDENT.sID;
+
 -- Q7.Find detail of student who have not applied to any of college
 -- By Subquery
 SELECT *
