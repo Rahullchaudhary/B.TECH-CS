@@ -3,7 +3,8 @@
 -- Q1. Produce a combine table in which each student is combine with every other application
 -- By cardinality 
 SELECT *
-FROM STUDENT, APPLY
+FROM 
+    STUDENT, APPLY
 ORDER BY STUDENT.sID;
 -- By JOIN 
 SELECT *
@@ -36,10 +37,8 @@ WHERE APPLY.cName = COLLEGE.collegeName
     AND College.state = 'CA'
 ORDER BY APPLY.sID;
 -- By join
-SELECT Apply.sID,
-    Apply.cName,
-    Apply.major,
-    Apply.decision
+SELECT 
+    Apply.sID, Apply.cName, Apply.major, Apply.decision
 FROM APPLY
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
 WHERE College.state = 'CA'
@@ -107,7 +106,8 @@ ORDER BY STUDENT.sID;
 -- Q7.Find detail of student who have not applied to any of college
 -- By Subquery
 SELECT *
-FROM STUDENT
+FROM 
+    STUDENT
 WHERE STUDENT.sID NOT IN (
         SELECT DISTINCT sID
         FROM APPLY
@@ -115,12 +115,15 @@ WHERE STUDENT.sID NOT IN (
 
 -- Q8. Find college where no student have applied
 -- By Subquery
-SELECT COLLEGE.collegeName
-FROM COLLEGE
+SELECT
+    COLLEGE.collegeName
+FROM 
+    COLLEGE
 WHERE COLLEGE.collegeName NOT IN (
         SELECT DISTINCT cName
         FROM APPLY
     );
+
 -- Q9.Find sID who have only one application
 SELECT sID
 FROM APPLY
@@ -129,27 +132,26 @@ HAVING COUNT(sID) = 1;
 
 -- Q10. Find name and GPA of applicants who apply to any college whose enrollment is not more than 25000.
 -- By cardinality
-SELECT DISTINCT STUDENT.sName,
-    STUDENT.GPA
-FROM STUDENT,
-    Apply,
-    College
-WHERE STUDENT.sID = Apply.sID
-    AND Apply.cName = COLLEGE.collegeName
+SELECT DISTINCT 
+    STUDENT.sName, STUDENT.GPA
+FROM 
+    STUDENT, APPLY, College
+WHERE STUDENT.sID = APPLY.sID
+    AND APPLY.cName = COLLEGE.collegeName
     AND COLLEGE.enrollmeNT < 25000;
 -- By join
-SELECT DISTINCT STUDENT.sName,
-    STUDENT.GPA
+SELECT DISTINCT 
+    STUDENT.sName, STUDENT.GPA
 FROM STUDENT
     INNER JOIN APPLY ON STUDENT.sID = APPLY.sID
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.collegeName
-WHERE sizeHS < 25000;
+WHERE enrollment < 25000;
 
 -- Q11. Find pair of students (sID) having same GPA. (each pair should occur just once in result)
 -- By cardinality
 SELECT DISTINCT 
     sID1.sID, sID2.sID
 FROM STUDENT sID1
-    INNER JOIN STUDENT sID1.GPA = sID2.GPA
+    INNER JOIN STUDENT sID2 ON sID1.GPA = sID2.GPA
 WHERE sID1.sID != sID2.sID
     AND sID1.sID > sID2.sID;
