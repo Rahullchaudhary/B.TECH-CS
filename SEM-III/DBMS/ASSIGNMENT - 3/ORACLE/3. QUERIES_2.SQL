@@ -2,32 +2,37 @@
 -- THREE VERSIONS (CROSS, NATURAL, INNER) JOIN
 
 -- Q12. Find student and major he / she applied to.
-            -- By cross join
-SELECT STUDENT.sName, APPLY.major
-FROM STUDENT CROSS JOIN APPLY
+-- By cross join
+SELECT
+    STUDENT.sName, APPLY.major
+FROM 
+    STUDENT CROSS JOIN APPLY
 WHERE STUDENT.sID = APPLY.sID
 GROUP BY STUDENT.sName, APPLY.major;
-            -- By natural join
-SELECT STUDENT.sName, APPLY.major
+-- By natural join
+SELECT 
+    STUDENT.sName, APPLY.major
 FROM STUDENT
     NATURAL JOIN APPLY
 GROUP BY STUDENT.sName, APPLY.major;
-            -- By inner
-SELECT STUDENT.sName, APPLY.major
+-- By inner
+SELECT 
+    STUDENT.sName, APPLY.major
 FROM STUDENT
     INNER JOIN APPLY ON STUDENT.sID = APPLY.sID
 GROUP BY STUDENT.sName, APPLY.major;
 
 -- Q13. Find detail of student who came from high school have size less than 20000 and applied to CS at Stanford.
-            -- By cross join
+-- By cross join
 SELECT
     STUDENT.sID, STUDENT.sName, STUDENT.GPA, STUDENT.sizeHS
-FROM STUDENT CROSS JOIN APPLY
+FROM 
+    STUDENT CROSS JOIN APPLY
 WHERE STUDENT.sID = APPLY.sID
     AND STUDENT.sizeHS < 20000
     AND APPLY.major = 'CS'
     AND APPLY.cName = 'Stanford';
-            -- By natural join
+-- By natural join
 SELECT
     sID, sName, GPA, sizeHS
 FROM STUDENT
@@ -35,7 +40,7 @@ FROM STUDENT
 WHERE STUDENT.sizeHS < 20000
     AND APPLY.major = 'CS'
     AND APPLY.cName = 'Stanford';
-            -- By inner join
+-- By inner join
 SELECT 
     STUDENT.sID, STUDENT.sName, STUDENT.GPA, STUDENT.sizeHS
 FROM STUDENT
@@ -46,19 +51,20 @@ WHERE STUDENT.sizeHS < 20000
 
 -- Q14. Provide complete detail of each student where they applied what major they applied to what was the decision
 --      and complete detail of cOLLEGE they applied.
-            -- By cross join
+-- By cross join
 SELECT *
-FROM STUDENT CROSS JOIN APPLY CROSS JOIN COLLEGE
+FROM 
+    STUDENT CROSS JOIN APPLY CROSS JOIN COLLEGE
 WHERE STUDENT.sID = APPLY.sID
     AND APPLY.cName = COLLEGE.cOLLEGEName
 ORDER BY STUDENT.sName, STUDENT.sID;
-            -- By natural join
+-- By natural join
 SELECT *
 FROM STUDENT
     NATURAL JOIN APPLY
     INNER JOIN COLLEGE ON APPLY.cName = COLLEGE.cOLLEGEName
 ORDER BY sName, sID;
-            -- By inner join
+-- By inner join
 SELECT *
 FROM STUDENT
     INNER JOIN APPLY ON APPLY.sID = STUDENT.sID
@@ -66,7 +72,7 @@ FROM STUDENT
 ORDER BY STUDENT.sName, STUDENT.sID;
 
 -- Q15. Names and GPAs of students with HS>1000 who applied to CS and were rejected.
-            -- By cross join
+-- By cross join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
@@ -77,7 +83,7 @@ WHERE
         AND APPLY.major = 'CS'
         AND APPLY.decision = 'N'
 ORDER BY STUDENT.sName , STUDENT.sID;
-            -- By natural join
+-- By natural join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
@@ -88,13 +94,12 @@ WHERE
         AND APPLY.major = 'CS'
         AND APPLY.decision = 'N'
 ORDER BY sName, sID;
-            -- By inner join
+-- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
     STUDENT
-    INNER JOIN
-    APPLY ON STUDENT.sID = APPLY.sID
+    INNER JOIN APPLY ON STUDENT.sID = APPLY.sID
 WHERE
     STUDENT.sizeHS > 1000
         AND APPLY.major = 'CS'
@@ -102,7 +107,7 @@ WHERE
 ORDER BY STUDENT.sName , STUDENT.sID;
 
 -- Q16. Names and GPAs of students with HS>1000 who applied to CS at college with enr>20,000 and were rejected
-            -- By cross join
+-- By cross join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
@@ -117,7 +122,7 @@ WHERE
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
 ORDER BY STUDENT.sName , STUDENT.sID;
-            -- By natural join
+-- By natural join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
@@ -130,7 +135,7 @@ WHERE
         AND COLLEGE.enrollment > 20000
         AND APPLY.decision = 'N'
 ORDER BY sName , sID;
-            -- By inner join
+-- By inner join
 SELECT 
     STUDENT.sName, STUDENT.GPA
 FROM
