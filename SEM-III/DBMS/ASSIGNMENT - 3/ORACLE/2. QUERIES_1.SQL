@@ -147,8 +147,8 @@ WHERE sizeHS < 25000;
 
 -- Q11. Find pair of students (sID) having same GPA. (each pair should occur just once in result)
 -- By cardinality
-SELECT DISTINCT sID1.sID,
-    sID.sID
+SELECT DISTINCT 
+    sID1.sID, sID2.sID
 FROM STUDENT sID1
     INNER JOIN STUDENT sID1.GPA = sID2.GPA
 WHERE sID1.sID != sID2.sID
