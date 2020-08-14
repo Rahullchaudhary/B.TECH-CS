@@ -126,13 +126,13 @@ HAVING COUNT(sName) >= 2;
 
 -- Q21. Find how many applications are filed by each student. 
 -- [Hint: use left join as we need information about all 12 students here. If they applied no where than show zero in front of them]
-SELECT STUDENT.sID,
-    sName,
+SELECT STUDENT.sName,
     COUNT(APPLY.sID) AS "applied_No."
 FROM STUDENT
     LEFT JOIN APPLY ON STUDENT.sID = APPLY.sID
-GROUP BY STUDENT.sID
-ORDER BY "applied_No.";
+GROUP BY STUDENT.sID,
+    STUDENT.sName
+ORDER BY "applied_No.";;
 
 -- Q22. Provide name of students that file 3 or more applications.
 -- By join
@@ -153,10 +153,11 @@ HAVING COUNT(STUDENT.sID) >= 3
 ORDER BY sName;
 
 -- Q23. Provide name of student who have not applied to any college.
-SELECT sName
+SELECT STUDENT.sName
 FROM STUDENT
     LEFT JOIN APPLY ON STUDENT.sID = APPLY.sID
-GROUP BY STUDENT.sID
+GROUP BY STUDENT.sID,
+    STUDENT.sName
 HAVING COUNT(APPLY.sID) = 0
 ORDER BY sName,
     COUNT(*) DESC;
