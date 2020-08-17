@@ -1,7 +1,7 @@
 -- QUERIES:
 
 -- Q1. Count the total number of Students.
-SELECT COUNT(*) AS Total_Students
+SELECT COUNT(sID) AS Total_Students
 FROM STUDENT;
 
 -- Q2. Calculate the average GPA of all Student.
@@ -37,7 +37,7 @@ SELECT COUNT(DISTINCT major) AS Distinct_Major
 FROM APPLY;
 
 -- Q8. Find total no.of Applications in our Application System's Database.
-SELECT COUNT(*) AS Total_Applications
+SELECT COUNT(sID) AS Total_Applications
 FROM APPLY;
 
 -- Q9. Find average of all distinct GPA.
@@ -64,21 +64,21 @@ HAVING major = 'marine biology';
 
 -- Q13. Find how many applications were rejected and accepted by the colleges.
 SELECT decision,
-    COUNT(*) AS "Y/N(No.)"
+    COUNT(sID) AS "Y/N(No.)"
 FROM APPLY
 GROUP BY decision
 ORDER BY decision;
 
 -- Q14. Find how many students applied to a particular major. (show count(sid) as No_of_applications).
 SELECT major,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM APPLY
 GROUP BY major
 ORDER BY major;
 
 -- Q15. Find number of applications received by particular college.
 SELECT cName,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM APPLY
 GROUP BY cName
 ORDER BY No_of_applications;
@@ -86,7 +86,7 @@ ORDER BY No_of_applications;
 -- Q16. Find number of applications received in a particular major at a particular college.
 SELECT cName,
     major,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM APPLY
 GROUP BY cName,
     major
@@ -95,7 +95,7 @@ ORDER BY No_of_applications;
 -- Q17. Give the college name and major, where number of applications received are greater than or equal to 2.
 SELECT cName,
     major,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM APPLY
 GROUP BY cName,
     major
@@ -104,7 +104,7 @@ ORDER BY cName;
 
 -- Q18. Give the name and no of applications of all those colleges which receives applications from 3 or more students.
 SELECT cName,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM APPLY
 GROUP BY cName
 HAVING COUNT(cName) > 3
@@ -112,7 +112,7 @@ ORDER BY No_of_applications;
 
 -- Q19. Give state and number of colleges of a state that has more than 1 college.
 SELECT state,
-    COUNT(*) AS No_of_applications
+    COUNT(sID) AS No_of_applications
 FROM COLLEGE
 GROUP BY state
 HAVING COUNT(state) > 1
@@ -177,14 +177,14 @@ ORDER BY cName;
 -- Q25. Find how many student have same GPA among all students.
 -- (provide this frequency in two column table as GPA 3.9 is 4 times, GPA 2.9 is 2 times )
 SELECT GPA,
-    COUNT(*) AS Repeated_Times
+    COUNT(sID) AS Repeated_Times
 FROM STUDENT
 GROUP BY GPA
 ORDER BY Repeated_Times;
 
 -- Q26. Find how many student have their name started from A, B or C.
 SELECT sName,
-    COUNT(*) AS "start_with(times)"
+    COUNT(sID) AS "start_with(times)"
 FROM STUDENT
 GROUP BY sName
 HAVING sName LIKE 'A%'
