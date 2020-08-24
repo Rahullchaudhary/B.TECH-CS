@@ -112,7 +112,7 @@ ORDER BY No_of_applications;
 
 -- Q19. Give state and number of colleges of a state that has more than 1 college.
 SELECT state,
-    COUNT(sID) AS No_of_applications
+    COUNT(*) AS No_of_applications
 FROM COLLEGE
 GROUP BY state
 HAVING COUNT(state) > 1
@@ -126,7 +126,7 @@ HAVING COUNT(sName) >= 2;
 
 -- Q21. Find how many applications are filed by each student. 
 -- [Hint: use left join as we need information about all 12 students here. If they applied no where than show zero in front of them]
-SELECT STUDENT.sName,
+SELECT STUDENT.sName, STUDENT.sID,
     COUNT(APPLY.sID) AS "applied_No."
 FROM STUDENT
     LEFT JOIN APPLY ON STUDENT.sID = APPLY.sID
@@ -144,11 +144,13 @@ GROUP BY sName
 HAVING COUNT(sID) >= 3
 ORDER BY sName;
 -- By cartesian
-SELECT sName
+SELECT sName, STUDENT.sID,
+    COUNT(*)
 FROM STUDENT,
     APPLY
 WHERE APPLY.sID = STUDENT.sID
-GROUP BY sName
+GROUP BY sName,
+    STUDENT.sID
 HAVING COUNT(STUDENT.sID) >= 3
 ORDER BY sName;
 
