@@ -74,7 +74,7 @@ WHERE sID IN (
         WHERE sName = 'Jay'
     );
 
---Q10. Find sID of student who applied to more or same number of college where Jay has applied?
+-- Q10. Find sID of student who applied to more or same number of college where Jay has applied?
 SELECT sID FROM APPLY
 GROUP BY sID
 HAVING COUNT(sID) >= (
@@ -84,20 +84,66 @@ HAVING COUNT(sID) >= (
                 WHERE sName = 'Jay')
     );
 
+-- Q11. Find details of Students who applied to major CS but not applied to major EE? (sID 987, 876, 543 should only be include in result)
+SELECT *
+FROM STUDENT WHERE sID IN(
+        SELECT sID FROM APPLY
+        WHERE major = 'CS'
+    )
+    AND sID NOT IN(
+        SELECT sID FROM APPLY
+        WHERE major = 'EE'
+    );
 
+-- Q12. All colleges such that some other college is in same state. (Cornell should not be part of result as no other college in New York Hint: use exists)
+SELECT cName FROM COLLEGE AS OUTER_QUERY
+WHERE EXISTS(
+        SELECT cName FROM COLLEGE
+        WHERE state = OUTER_QUERY.state
+        AND cName != OUTER_QUERY.cName
+    );
+-- OR
+SELECT cName FROM COLLEGE
+WHERE state IN (
+        SELECT state FROM COLLEGE
+        GROUP BY state
+        HAVING COUNT(state) >= 2
+    );
 
+-- Q13. Find the college with highest enrollment.
+SELECT cName FROM APPLY
+GROUP BY cName
+HAVING COUNT(DISTINCT sID) IN (
+        SELECT MAX(ENROLLMENT_COUNT)
+        FROM (
+                SELECT COUNT(DISTINCT sID) AS ENROLLMENT_COUNT
+                FROM APPLY
+                GROUP BY cName
+            ) AS COUNT_TABLE
+    );
 
+-- Q14. Find name of student having lowest GPA.
+SELECT sName FROM STUDENT
+WHERE GPA IN(
+        SELECT MIN(GPA) FROM STUDENT
+    );
 
+-- Q15. Find the most popular major.
+SELECT major FROM APPLY
+GROUP BY major
+HAVING COUNT(DISTINCT sID) IN (
+        SELECT MAX(POPULAR_MAJOR)
+        FROM (
+                SELECT COUNT(DISTINCT sID) AS POPULAR_MAJOR
+                FROM APPLY
+                GROUP BY major
+            ) AS COUNT_TABLE
+    );
 
-
-
-
-
-
-
-
-
-
-
-
-
+-- Q16. Find sID, sName, sizeHS of all students NOT from smallest HS.
+SELECT sID, sName, sizeHS
+FROM STUDENT
+WHERE sizeHS <> (
+        SELECT MIN(sizeHS) FROM STUDENT
+    );
+    
